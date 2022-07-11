@@ -39,8 +39,9 @@ set cursorline           " 高亮显示当前行
 set whichwrap+=<,>,h,l   " 设置光标键跨行
 set ttimeoutlen=0        " 设置<ESC>键响应时间
 set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
+set termguicolors           "设置终端支持真色
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码缩进和排版
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set autoindent           " 设置自动缩进
@@ -132,6 +133,8 @@ Plug 'chxuan/vimplus-startify'
 Plug 'preservim/tagbar'
 "Plug 'Valloric/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'overcache/NeoSolarized'
+Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/LeaderF'
 Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
@@ -211,7 +214,7 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 " 主题设置
 set background=dark
 let g:onedark_termcolors=256
-colorscheme onedark
+colorscheme NeoSolarized
 
 " airline
 let g:airline_theme="onedark"
