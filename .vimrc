@@ -305,6 +305,7 @@ let g:NERDTreeDirArrowCollapsible='▼'
 
 "coc.nvim插件的自动安装
 let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-clangd', 'coc-html', 'coc-css', 'coc-pyright', 'coc-jedi', 'coc-sh', 'coc-cmake']
+                            " 配置文件格式  js              c/c++           html    css         python                      bash        cmake
 
 " YCM
 " 如果不指定python解释器路径，ycm会自己搜索一个合适的(与编译ycm时使用的python版本匹配)
