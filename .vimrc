@@ -132,11 +132,10 @@ Plug 'chxuan/vim-buffer'
 Plug 'chxuan/vimplus-startify'
 Plug 'preservim/tagbar'
 Plug 'Valloric/YouCompleteMe'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'overcache/NeoSolarized'
 Plug 'luochen1990/rainbow'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'mattn/emmet-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Yggdroot/LeaderF'
 Plug 'mileszs/ack.vim'
@@ -307,31 +306,7 @@ let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 
 "coc.nvim插件的自动安装
-let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-clangd', 'coc-html', 'coc-css', 'coc-pyright', 'coc-sh', 'coc-cmake']
-
-"emmet-vim
-let g:user_emmet_install_global = 0
-autocmd FileType html.css EmmetInstall
-let g:user_emmet_settings = {
-\  'variables': {'lang': 'ja'},
-\  'html': {
-\    'default_attributes': {
-\      'option': {'value': v:null},
-\      'textarea': {'id': v:null, 'name': v:null, 'cols': 10, 'rows': 10},
-\    },
-\    'snippets': {
-\      'html:5': "<!DOCTYPE html>\n"
-\              ."<html lang=\"${lang}\">\n"
-\              ."<head>\n"
-\              ."\t<meta charset=\"${charset}\">\n"
-\              ."\t<title></title>\n"
-\              ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
-\              ."</head>\n"
-\              ."<body>\n\t${child}|\n</body>\n"
-\              ."</html>",
-\    },
-\  },
-\}
+let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-css', 'coc-sh', 'coc-cmake']
 
 
 " YCM
