@@ -132,11 +132,12 @@ Plug 'chxuan/vim-buffer'
 Plug 'chxuan/vimplus-startify'
 Plug 'preservim/tagbar'
 Plug 'Valloric/YouCompleteMe'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'overcache/NeoSolarized'
 Plug 'luochen1990/rainbow'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'gcmt/wildfire.vim'
 Plug 'Yggdroot/LeaderF'
 Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
@@ -266,33 +267,28 @@ nnoremap C :ChangeText<cr>
 nnoremap <leader>r :ReplaceTo<space>
 
 "rainbow
-"rainbow
-" 1. vscode defult 2. author defult 3. vscode show
-"	\	'guifgs': ['#B21212', '#1B9CED','#FFFC00'],
-"	\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-"	\	'guifgs': ['#C186BF', '#268EDB','#F79318'],
-	let g:rainbow_conf = {
-	\	'guifgs': ['#C186BF', '#268EDB','#F79318'],
-	\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-	\	'operators': '_,_',
-	\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-	\	'separately': {
-	\		'*': {},
-	\		'tex': {
-	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-	\		},
-	\		'lisp': {
-	\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-	\		},
-	\		'vim': {
-	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-	\		},
-	\		'html': {
-	\			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-	\		},
-	\		'css': 0,
-	\	}
-	\}
+let g:rainbow_conf = {
+        \	'guifgs': ['#C186BF', '#268EDB','#F79318'],
+        \	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+        \	'operators': '_,_',
+        \	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+        \	'separately': {
+        \		'*': {},
+        \		'tex': {
+        \			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+        \		},
+        \		'lisp': {
+        \			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+        \		},
+        \		'vim': {
+        \			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+        \		},
+        \		'html': {
+        \			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+        \		},
+        \		'css': 0,
+        \	}
+        \}
 let g:rainbow_active = 1
 
 " nerdtree
@@ -334,6 +330,20 @@ let g:ycm_semantic_triggers =  {
             \   'lua' : ['.', ':'],
             \   'erlang' : [':'],
             \ }
+let g:ycm_language_server = 
+      \ [ 
+      \   {
+      \     'name': 'yaml',
+      \     'cmdline': [ '/usr/bin/yaml-language-server', '--stdio' ],
+      \     'filetypes': [ 'yaml' ]
+      \   },
+      \   {
+      \     'name': 'json',
+      \     'cmdline': [ '/usr/bin/vscode-json-languageserver', '--stdio' ],
+      \     'filetypes': [ 'json' ],
+      \     'capabilities': #{ textDocument: #{ completion: #{ completionItem: #{ snippetSupport: v:true } } } },
+      \   },
+      \ ]
 nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
 " 已经使用cpp-mode插件提供的转到函数实现的功能
 " nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
