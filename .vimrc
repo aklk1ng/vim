@@ -302,7 +302,7 @@ let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 
 "coc.nvim插件的自动安装
-let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-css', 'coc-sh', 'coc-cmake', 'coc-clangd', 'coc-pyright']
+let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-css', 'coc-sh', 'coc-cmake', 'coc-clangd', 'coc-jedi', 'coc-yaml', 'coc-snippets', 'coc-emmet', 'coc-flutter', 'coc-go', 'coc-fzf-preview', 'coc-highlight']
 
 
 " YCM

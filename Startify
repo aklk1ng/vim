@@ -1,0 +1,30 @@
+
+            __                __                
+    __   __/_/___ ___  ____  / /_  _______      
+    \ \ / / / __ `__ \/ __ \/ / / / / ___/      
+     \ V / / / / / / / /_/ / / /_/ (__  )       
+      \_/_/_/ /_/ /_/ ,___/_/\____/____/        
+                   /_/                          
+                                                
+    Keep It Simple, Stupid.                     
+
+   [e]  <empty buffer>
+
+   MRU
+
+   [0]   ~/.vimplus/.vimrc
+   [1]   /usr/share/xsessions/dwm.desktop
+   [2]   ~/.vimrc
+   [3]   ~/.zshrc
+   [4]   /etc/default/grub
+   [5]   /etc/v2ray/config.json
+   [6]   /etc/proxychains.conf
+   [7]   /etc/cgproxy/config.json
+   [8]   /opt/yt-dlp/.git/config
+   [9]   /etc/passwd
+
+   MRU /root/.vimplus
+
+   [10]  .vimrc
+
+   [q]  <quit>
