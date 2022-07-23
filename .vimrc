@@ -131,12 +131,13 @@ Plug 'chxuan/prepare-code'
 Plug 'chxuan/vim-buffer'
 Plug 'chxuan/vimplus-startify'
 Plug 'preservim/tagbar'
-"Plug 'Valloric/YouCompleteMe'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Valloric/YouCompleteMe'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'overcache/NeoSolarized'
 Plug 'luochen1990/rainbow'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'elzr/vim-json'
 Plug 'gcmt/wildfire.vim'
 Plug 'Yggdroot/LeaderF'
 Plug 'mileszs/ack.vim'
@@ -302,7 +303,11 @@ let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 
 "coc.nvim插件的自动安装
+<<<<<<< HEAD
 let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-css', 'coc-sh', 'coc-cmake', 'coc-clangd', 'coc-jedi', 'coc-yaml', 'coc-snippets', 'coc-emmet', 'coc-flutter', 'coc-go', 'coc-fzf-preview', 'coc-highlight']
+=======
+let g:coc_global_extensions = [ 'coc-json', 'coc-html', 'coc-css', 'coc-sh', 'coc-cmake', 'coc-clangd', 'coc-jedi', 'coc-highlight']
+>>>>>>> 4fea18c (update)
 
 
 " YCM
