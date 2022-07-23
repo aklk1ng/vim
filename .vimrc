@@ -131,7 +131,7 @@ Plug 'chxuan/prepare-code'
 Plug 'chxuan/vim-buffer'
 Plug 'chxuan/vimplus-startify'
 Plug 'preservim/tagbar'
-Plug 'Valloric/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'overcache/NeoSolarized'
 Plug 'luochen1990/rainbow'
